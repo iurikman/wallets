@@ -1,0 +1,36 @@
+linters-settings:
+  gocyclo:
+    min-complexity: 24
+  cyclop:
+    max-complexity: 24
+  forbidigo:
+    forbid:
+      - .*\.fatal,*
+      - fmt.Print.*
+  gci:
+    skip-generated: true
+  gofmt:
+    simplify: true
+  lll:
+    line-length: 160
+
+linters:
+  enable-all: true
+
+  disable:
+    - funlen
+    - depguard
+    - exportloopref
+    - exhaustruct
+    - ireturn
+    - tagalign
+    - varnamelen
+    - wastedassign
+
+run:
+  timeout: 5m
+  tests: false
+
+output:
+  formats:
+    - format: colored-line-number
